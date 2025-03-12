@@ -24,8 +24,16 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#coding-profiles">Coding Profiles</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <!-- My Resume Button in Navigation Bar -->
+                <li>
+                    <label class="resume-checkbox">
+                        <input type="checkbox" id="resume-checkbox">
+                        <span>My Resume</span>
+                    </label>
+                </li>
             </ul>
             <div class="hamburger">
                 <i class="fas fa-bars"></i>
@@ -37,6 +45,7 @@
     <section id="home" class="hero">
         <div class="container">
             <h1>Dune Sankar Narayan Sathvik</h1>
+            <p>I’m a highly passionate, motivated, and enthusiastic individual, committed to continuous learning and excellence. Eager to apply my academic knowledge in a dynamic and growth-oriented environment.</p>
             <p>B.Tech in CSE - Artificial Intelligence and Machine Learning</p>
             <p>Contact: 91-6303439522 | Email: sathvikdune1@gmail.com</p>
             <div class="social-links">
@@ -125,6 +134,35 @@
         </div>
     </section>
 
+    <!-- Coding Profiles Section -->
+    <section id="coding-profiles" class="section">
+        <div class="container">
+            <h2>Coding Profiles</h2>
+            <div class="coding-profiles-grid">
+                <div class="coding-profile-item">
+                    <h3>LeetCode</h3>
+                    <p>150+ Problems Solved</p>
+                    <a href="https://leetcode.com/u/sathvikdune/" target="_blank">Profile</a>
+                </div>
+                <div class="coding-profile-item">
+                    <h3>GeeksforGeeks</h3>
+                    <p>20+ Problems Solved</p>
+                    <a href="https://www.geeksforgeeks.org/user/sathvikh7mh/" target="_blank">Profile</a>
+                </div>
+                <div class="coding-profile-item">
+                    <h3>CodeChef</h3>
+                    <p>150+ Problems Solved</p>
+                    <a href="https://www.codechef.com/users/sathvikdune" target="_blank">Profile</a>
+                </div>
+                <div class="coding-profile-item">
+                    <h3>HackerRank</h3>
+                    <p>Problems Solved</p>
+                    <a href="https://www.hackerrank.com/profile/sathvikdune1" target="_blank">Profile</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Certifications Section -->
     <section id="certifications" class="section">
         <div class="container">
@@ -176,6 +214,7 @@
         </div>
     </section>
 
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -183,7 +222,15 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Dark Mode and Smooth Scrolling -->
+    <!-- JavaScript for Dark Mode, Smooth Scrolling, and Resume Checkbox -->
     <script src="script.js"></script>
+    <script>
+        document.getElementById('resume-checkbox').addEventListener('change', function() {
+            if (this.checked) {
+                window.open('https://drive.google.com/file/d/16XIZISr_JM44jLIIscWpw4CnywrV8ufv/view?usp=sharing', '_blank');
+                this.checked = false; // Uncheck the box after opening the link
+            }
+        });
+    </script>
 </body>
 </html>
