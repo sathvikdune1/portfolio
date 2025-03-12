@@ -22,3 +22,26 @@ const navLinks = document.querySelector('.nav-links');
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
+
+// Add animation on scroll
+const sections = document.querySelectorAll('.section');
+const options = {
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fadeIn');
+            observer.unobserve(entry.target);
+        }
+    });
+}, options);
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+
+// Floating animation for hero section
+const hero = document.querySelector('.hero');
+hero.style.animation = 'float 3s ease-in-out infinite';
